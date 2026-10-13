@@ -157,10 +157,10 @@ Adjust any hex values here to change the palette site-wide.
 Since this project consists of standard static files (`index.html`, `css/`, `js/`, `assets/`), you can host it for free on any modern static hosting service:
 
 ### GitHub Pages
-1. Push this folder to a GitHub repository.
-2. In your GitHub repository, go to **Settings** &rarr; **Pages**.
-3. Under **Branch**, select `main` (root) and click **Save**.
-4. Your site will be live at `https://<your-username>.github.io/<repo-name>/`.
+1. This repository is already pushed to [github.com/mfasaludheen-07/Portfolio](https://github.com/mfasaludheen-07/Portfolio).
+2. Go to **Settings** &rarr; **Pages** in the repository.
+3. Under **Build and deployment** &rarr; **Source**, select **GitHub Actions** (or select **Deploy from a branch** &rarr; `main` &rarr; `/ (root)`).
+4. Your site is live at: **[https://mfasaludheen-07.github.io/Portfolio/](https://mfasaludheen-07.github.io/Portfolio/)**
 
 ### Cloudflare Pages or Vercel / Netlify
 1. Log into [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), or [Netlify](https://netlify.com/).
