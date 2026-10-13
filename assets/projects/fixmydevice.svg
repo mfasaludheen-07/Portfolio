@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="fmd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14101d" />
+      <stop offset="50%" stop-color="#0c0a12" />
+      <stop offset="100%" stop-color="#08070b" />
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A46BEE" />
+      <stop offset="100%" stop-color="#C594F5" />
+    </linearGradient>
+    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#fmd-bg)" rx="16" />
+  <rect width="800" height="500" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" rx="16" />
+
+  <!-- Ambient background glow -->
+  <circle cx="620" cy="180" r="140" fill="#A46BEE" opacity="0.12" filter="url(#glow-blur)" />
+  <circle cx="200" cy="380" r="100" fill="#C594F5" opacity="0.08" filter="url(#glow-blur)" />
+
+  <!-- Top bar / window header -->
+  <line x1="0" y1="52" x2="800" y2="52" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <circle cx="36" cy="26" r="5" fill="#3a3447" />
+  <circle cx="54" cy="26" r="5" fill="#3a3447" />
+  <circle cx="72" cy="26" r="5" fill="#3a3447" />
+  <text x="100" y="31" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="500" letter-spacing="1">FIXMYDEVICE // SYSTEM CONSOLE</text>
+  <rect x="680" y="16" width="86" height="20" rx="10" fill="rgba(164,107,238,0.15)" stroke="rgba(164,107,238,0.4)" stroke-width="1" />
+  <text x="723" y="30" fill="#C594F5" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle">ACTIVE v1.0</text>
+
+  <!-- Left diagnostic panel -->
+  <rect x="40" y="80" width="300" height="370" rx="10" fill="#110d18" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <text x="64" y="115" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600">Complaint #TK-8421</text>
+  <text x="64" y="135" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="12">Hardware Power Rail Fault</text>
+
+  <!-- Stepper -->
+  <circle cx="70" cy="180" r="8" fill="#A46BEE" />
+  <text x="70" y="184" fill="#08070B" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">1</text>
+  <text x="92" y="184" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="500">Ticket Submitted</text>
+  <text x="92" y="199" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="10">Telemetry log parsed</text>
+
+  <line x1="70" y1="194" x2="70" y2="236" stroke="#A46BEE" stroke-width="2" stroke-dasharray="3 3" />
+
+  <circle cx="70" cy="246" r="8" fill="#C594F5" />
+  <text x="70" y="250" fill="#08070B" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">2</text>
+  <text x="92" y="250" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="500">In Diagnostic Triage</text>
+  <text x="92" y="265" fill="#A46BEE" font-family="Inter, -apple-system, sans-serif" font-size="10">Bench tests in progress</text>
+
+  <line x1="70" y1="260" x2="70" y2="302" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+  <circle cx="70" cy="312" r="8" fill="#241e30" stroke="rgba(255,255,255,0.2)" />
+  <text x="70" y="316" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">3</text>
+  <text x="92" y="316" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="12">Repair & Validation</text>
+
+  <line x1="70" y1="326" x2="70" y2="368" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+  <circle cx="70" cy="378" r="8" fill="#241e30" stroke="rgba(255,255,255,0.2)" />
+  <text x="70" y="382" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">4</text>
+  <text x="92" y="382" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="12">Ready for Handover</text>
+
+  <!-- Right Schematic Panel -->
+  <rect x="364" y="80" width="396" height="370" rx="10" fill="#110d18" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  
+  <!-- Waveform / Oscilloscope -->
+  <path d="M390 160 L 460 160 L 480 120 L 510 200 L 530 140 L 550 170 L 570 160 L 730 160" fill="none" stroke="url(#purple-glow)" stroke-width="2" />
+  <path d="M390 160 L 460 160 L 480 120 L 510 200 L 530 140 L 550 170 L 570 160 L 730 160 L 730 200 L 390 200 Z" fill="url(#purple-glow)" opacity="0.06" />
+
+  <!-- Circuit nodes -->
+  <rect x="390" y="240" width="160" height="80" rx="6" fill="#161221" stroke="rgba(164,107,238,0.3)" stroke-width="1" />
+  <text x="410" y="270" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">Main Logic Board</text>
+  <text x="410" y="292" fill="#A46BEE" font-family="Inter, -apple-system, sans-serif" font-size="11">Voltage: 19.4V nominal</text>
+
+  <rect x="580" y="240" width="156" height="80" rx="6" fill="#161221" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="600" y="270" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500">Service Pipeline</text>
+  <text x="600" y="292" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="11">Automated status sync</text>
+
+  <!-- Bottom status strip -->
+  <rect x="390" y="348" width="346" height="74" rx="8" fill="#161221" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <circle cx="415" cy="385" r="4" fill="#C594F5" />
+  <text x="430" y="380" fill="#F3EFF8" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="500">Service Tracking & Diagnostic Logging</text>
+  <text x="430" y="398" fill="#7E768E" font-family="Inter, -apple-system, sans-serif" font-size="11">Real-time status updates for customers & engineers</text>
+</svg>
